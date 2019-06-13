@@ -1,5 +1,7 @@
 # VueJs Word Translator
 
+### Translator app using yandex API
+
 ## Project setup
 ```
 npm install
