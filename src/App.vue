@@ -4,7 +4,9 @@
     <h1>Translator</h1>
     <TranslateForm @formSubmit="translateText" />
     <TranslateOutput v-if="translatedText" v-text="translatedText" />
-
+    <footer>
+      <h3> &copy; made by <a href="https://www.linkedin.com/in/simadurlan92/" target="_blank">Stefan Simic</a></h3>
+    </footer>
   </div>
 </template>
 
@@ -47,7 +49,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 img {
@@ -56,10 +58,37 @@ img {
   left: 30px;
 }
 
+footer {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer h3 {
+  padding: 10px;
+  border-top: 1px solid #fff;
+  text-align: center;
+}
+
+footer a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
 @media(max-width: 600px) {
   img {
     width: 50px;
   }
 }
+
+
 
 </style>

@@ -39,7 +39,7 @@ select {
   height: 40px;
   color: #2c3e50;
   border: none;
-  background: white;
+  background: #fff;
 }
 
 select:focus {
@@ -68,7 +68,7 @@ input[type="submit"] {
         display: block;
         border: none;
         width: 80%;
-        margin: 50px auto 20px auto;
+        margin: 60px auto 20px auto;
     }
 
 }
