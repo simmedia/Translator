@@ -1,6 +1,6 @@
 # VueJs Word Translator
 
-### Translator app using yandex API
+### Translator app using [yandex API](https://translate.yandex.com/)
 
 ## Project setup
 ```
