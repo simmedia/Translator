@@ -1,4 +1,4 @@
-# wordtranslator
+# VueJs Word Translator
 
 ## Project setup
 ```
