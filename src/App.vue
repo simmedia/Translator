@@ -1,18 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" width="70px" alt="">
-    <h1>Translator</h1>
-    <TranslateForm @formSubmit="translateText" />
-    <TranslateOutput v-if="translatedText" v-text="translatedText" />
+    <img src="./assets/logo.png" width="70px" alt>
+    <div class="wrapper">
+      <h1>Translator</h1>
+      <TranslateForm @formSubmit="translateText"/>
+      <TranslateOutput v-if="translatedText" v-text="translatedText"/>
+    </div>
     <footer>
-      <h3> &copy; made by <a href="https://www.linkedin.com/in/simadurlan92/" target="_blank">Stefan Simic</a></h3>
+      <h3>
+        &copy; made by
+        <a
+          href="https://www.linkedin.com/in/simadurlan92/"
+          target="_blank"
+        >Stefan Simic</a>
+      </h3>
     </footer>
   </div>
 </template>
 
 <script>
-import TranslateForm from "./components/TranslateForm"
-import TranslateOutput from "./components/TranslateOutput"
+import TranslateForm from "./components/TranslateForm";
+import TranslateOutput from "./components/TranslateOutput";
 
 export default {
   name: "app",
@@ -22,26 +30,35 @@ export default {
   },
   data() {
     return {
-      translatedText: ''
-    }
+      translatedText: ""
+    };
   },
   methods: {
-    translateText(text,language) {
-      this.$http.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190613T214744Z.88416eb5dc9c683f.709a71a569d29592da19d65b86b8e609e04e3151&lang='+language+'&text='+text)
-      .then((response)=> {
-        this.translatedText = response.body.text[0]
-      })
+    translateText(text, language) {
+      this.$http
+        .get(
+          "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190613T214744Z.88416eb5dc9c683f.709a71a569d29592da19d65b86b8e609e04e3151&lang=" +
+            language +
+            "&text=" +
+            text
+        )
+        .then(response => {
+          this.translatedText = response.body.text[0];
+        });
     }
   }
 };
-
-
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background: #ff6b81;
-  height: 100vh;
+  box-sizing: border-box;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -49,7 +66,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  margin-top: 120px;
+  margin-top: 100px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 img {
@@ -75,7 +94,7 @@ footer h3 {
 footer a {
   color: #2c3e50;
   text-decoration: none;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 footer a:hover {
@@ -83,12 +102,17 @@ footer a:hover {
   border-bottom: 1px solid #fff;
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   img {
     width: 50px;
   }
+
+  footer {
+    position: relative;
+    left: 0;
+    margin: 0 auto;
+    transform: none;
+    top: 250px;
+  }
 }
-
-
-
 </style>

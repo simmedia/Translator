@@ -42,6 +42,10 @@ select {
   background: #fff;
 }
 
+form {
+    flex: 8;
+}
+
 select:focus {
     border: none;
     outline: none;
