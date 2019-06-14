@@ -66,7 +66,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  margin-top: 100px;
+  padding-top: 100px;
   height: 100%;
   box-sizing: border-box;
 }
@@ -108,11 +108,11 @@ footer a:hover {
   }
 
   footer {
-    position: relative;
-    left: 0;
+    position: absolute;
+    left: 50%;
+    top: 93%;
     margin: 0 auto;
-    transform: none;
-    top: 250px;
+    transform: translateX(-50%);
   }
 }
 </style>
