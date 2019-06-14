@@ -6,6 +6,7 @@
       <TranslateForm @formSubmit="translateText"/>
       <TranslateOutput v-if="translatedText" v-text="translatedText"/>
     </div>
+
     <footer>
       <h3>
         &copy; made by
@@ -59,6 +60,7 @@ export default {
 body {
   background: #ff6b81;
   box-sizing: border-box;
+  height: 100%;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -70,6 +72,11 @@ body {
   height: 100%;
   box-sizing: border-box;
 }
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
 
 img {
   position: absolute;
@@ -79,10 +86,7 @@ img {
 
 footer {
   width: 80%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
 }
 
 footer h3 {
@@ -107,12 +111,5 @@ footer a:hover {
     width: 50px;
   }
 
-  footer {
-    position: absolute;
-    left: 50%;
-    top: 93%;
-    margin: 0 auto;
-    transform: translateX(-50%);
-  }
 }
 </style>

@@ -7,10 +7,7 @@
 <script>
 export default {
   name: "TranslateOutput",
-  props: ["translatedText"],
-  data() {
-    return {};
-  }
+  props: ["translatedText"]
 };
 </script>
 
