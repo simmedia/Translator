@@ -1,4 +1,8 @@
-# wordtranslator
+# VueJs Word Translator
+
+#### [View Demo](https://simmedia-translator.netlify.com/)
+
+### Translator app using [yandex API](https://translate.yandex.com/)
 
 ## Project setup
 ```
