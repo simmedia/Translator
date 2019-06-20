@@ -23,6 +23,7 @@ export default {
       textToTranslate: "",
       language: "",
       allLanguages: [
+        { name: "Serbian", value: "sr" },
         { name: "Chech", value: "cs" },
         { name: "English", value: "en" },
         { name: "French", value: "fr" },
