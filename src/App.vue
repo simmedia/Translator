@@ -60,7 +60,7 @@ export default {
 body {
   background: #ff6b81;
   box-sizing: border-box;
-  height: 100%;
+  /* height: 100vh; */
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -74,7 +74,7 @@ body {
 }
 .wrapper {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   position: relative;
 }
 

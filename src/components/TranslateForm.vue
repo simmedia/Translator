@@ -5,6 +5,12 @@
       <select v-model="language">
         <option value="sr">Serbian</option>
         <option value="en">English</option>
+        <option value="de">German</option>
+        <option value="fr">French</option>
+        <option value="cs">Chech</option>
+        <option value="es">Spanish</option>
+        <option value="it">Italian</option>
+        <option value="ru">Russian</option>
       </select>
       <input type="submit" value="Translate">
     </form>
@@ -57,7 +63,7 @@ input[type="text"] {
   outline: none;
   width: 40%;
   padding: 5px;
-  height: 30px;
+  height: 40px;
   color: #2c3e50;
   font-size: 1rem;
   margin-top: 60px;
