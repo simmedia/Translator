@@ -3,28 +3,12 @@
     <form @submit="formSubmit">
       <input type="text" v-model="textToTranslate" placeholder="Enter a word">
       <select v-model="language">
-        <option v-for="(language,index) in allLanguages" :key="index" class="option" :value="language.value">
-          {{language.name}}
-        </option>
-
-
-
-
-
-
-
-
-
-  
-
-<!-- 
-        <option class="option" value="en">English</option>
-        <option class="option" value="de">German</option>
-        <option class="option" value="fr">French</option>
-        <option class="option" value="cs">Chech</option>
-        <option class="option" value="es">Spanish</option>
-        <option class="option" value="it">Italian</option>
-        <option class="option" value="ru">Russian</option> -->
+        <option
+          v-for="(language,index) in allLanguages"
+          :key="index"
+          class="option"
+          :value="language.value"
+        >{{language.name}}</option>
       </select>
       <input type="submit" value="Translate">
     </form>
@@ -38,15 +22,14 @@ export default {
     return {
       textToTranslate: "",
       language: "",
-
       allLanguages: [
-        {name: 'Chech', value: 'cs'},
-        {name: 'English', value: 'en'},
-        {name: 'French', value: 'fr'},
-        {name: 'German', value: 'de'},
-        {name: 'Spanish', value: 'es'},
-        {name: 'Italian', value: 'it'},
-        {name: 'Russian', value: 'ru'},
+        { name: "Chech", value: "cs" },
+        { name: "English", value: "en" },
+        { name: "French", value: "fr" },
+        { name: "German", value: "de" },
+        { name: "Spanish", value: "es" },
+        { name: "Italian", value: "it" },
+        { name: "Russian", value: "ru" }
       ]
     };
   },
@@ -73,12 +56,12 @@ select {
 }
 
 form {
-    flex: 8;
+  flex: 8;
 }
 
 select:focus {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 input[type="text"] {
@@ -97,13 +80,12 @@ input[type="submit"] {
   display: none;
 }
 
-@media(max-width: 600px) {
-    input[type="text"] {
-        display: block;
-        border: none;
-        width: 80%;
-        margin: 60px auto 20px auto;
-    }
-
+@media (max-width: 600px) {
+  input[type="text"] {
+    display: block;
+    border: none;
+    width: 80%;
+    margin: 60px auto 20px auto;
+  }
 }
 </style>
