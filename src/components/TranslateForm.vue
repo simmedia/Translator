@@ -3,14 +3,28 @@
     <form @submit="formSubmit">
       <input type="text" v-model="textToTranslate" placeholder="Enter a word">
       <select v-model="language">
-        <option value="sr">Serbian</option>
-        <option value="en">English</option>
-        <option value="de">German</option>
-        <option value="fr">French</option>
-        <option value="cs">Chech</option>
-        <option value="es">Spanish</option>
-        <option value="it">Italian</option>
-        <option value="ru">Russian</option>
+        <option v-for="(language,index) in allLanguages" :key="index" class="option" :value="language.value">
+          {{language.name}}
+        </option>
+
+
+
+
+
+
+
+
+
+  
+
+<!-- 
+        <option class="option" value="en">English</option>
+        <option class="option" value="de">German</option>
+        <option class="option" value="fr">French</option>
+        <option class="option" value="cs">Chech</option>
+        <option class="option" value="es">Spanish</option>
+        <option class="option" value="it">Italian</option>
+        <option class="option" value="ru">Russian</option> -->
       </select>
       <input type="submit" value="Translate">
     </form>
@@ -23,11 +37,21 @@ export default {
   data() {
     return {
       textToTranslate: "",
-      language: ""
+      language: "",
+
+      allLanguages: [
+        {name: 'Chech', value: 'cs'},
+        {name: 'English', value: 'en'},
+        {name: 'French', value: 'fr'},
+        {name: 'German', value: 'de'},
+        {name: 'Spanish', value: 'es'},
+        {name: 'Italian', value: 'it'},
+        {name: 'Russian', value: 'ru'},
+      ]
     };
   },
   created() {
-    this.language = "sr";
+    this.language = "en";
   },
   methods: {
     formSubmit(each) {
