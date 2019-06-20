@@ -19,7 +19,7 @@ export default {
   width: 30%;
   text-align: left;
   color: #2c3e50;
-  background: #fff;
+  background: #ffffff;
 }
 
 @media (max-width: 600px) {
